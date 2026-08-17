@@ -31,7 +31,7 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: "Development"
       ASPNETCORE_URLS: "http://+:8080"
-      ConnectionStrings__DefaultConnection: "Host=dpg-da1lelm417fc73el2rsg-a;Port=5432;Database=peliculas_ofs5;Username=peliculas_user;Password=7qOZ0gW3NC2qzhhSojsEKGPkHlwyNjfv"
+      ConnectionStrings__DefaultConnection: "Host=postgres_peliculas;Port=5432;Database=movies-db-rm220481;Username=admin_des;Password=App2026!"
 
 volumes:
   postgres_data:
