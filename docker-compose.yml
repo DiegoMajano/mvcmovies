@@ -5,9 +5,9 @@ services:
     image: postgres:16-alpine
     container_name: postgres_peliculas
     environment:
-      POSTGRES_DB: "Peliculas"
-      POSTGRES_USER: "postgres"
-      POSTGRES_PASSWORD: "TuPassword123!" 
+      POSTGRES_DB: "movies-db-rm220481"
+      POSTGRES_USER: "admin_des"
+      POSTGRES_PASSWORD: "App2026!" 
     ports:
       - "5432:5432"
     volumes:
@@ -31,7 +31,7 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: "Development"
       ASPNETCORE_URLS: "http://+:8080"
-      ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=Peliculas;Username=postgres;Password=TuPassword123!"
+      ConnectionStrings__DefaultConnection: "Host=postgres_peliculas;Port=5432;Database=movies-db-rm220481;Username=admin_des;Password=App2026!"
 
 volumes:
   postgres_data:

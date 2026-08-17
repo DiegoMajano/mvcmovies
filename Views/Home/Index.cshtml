@@ -1,8 +1,66 @@
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Inicio";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/es-es/aspnet/core/?view=aspnetcore-10.0">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center py-5">
+    <h1 class="display-4 fw-bold text-primary mb-2">Sistema de Gestión</h1>
+    <p class="lead text-muted mb-1">Películas y Géneros &nbsp;|&nbsp; Empleados, Proyectos y Asignaciones</p>
+    <p class="text-secondary">Desarrollado por <strong>Diego José Rodríguez Majano</strong> — ROM220481</p>
+</div>
+
+<hr class="my-4">
+
+<div class="container">
+    <h2 class="text-center mb-4">Módulos disponibles</h2>
+
+    <div class="row g-4 justify-content-center">
+
+        <!-- Ejercicio 1: Películas -->
+        <div class="col-md-5">
+            <div class="card shadow-sm h-100 border-0">
+                <div class="card-body text-center p-4">
+                    <h4 class="card-title">Películas</h4>
+                    <p class="card-text text-muted">
+                        Gestión de películas y géneros cinematográficos. CRUD completo.
+                    </p>
+                    <div class="d-flex justify-content-center gap-2 mt-3">
+                        <a asp-controller="Pelicula" asp-action="Index" class="btn btn-primary">
+                            Ver Películas
+                        </a>
+                        <a asp-controller="Genero" asp-action="Index" class="btn btn-outline-primary">
+                            Ver Géneros
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ejercicio 2: Empleados / Proyectos / Asignaciones -->
+        <div class="col-md-5">
+            <div class="card shadow-sm h-100 border-0">
+                <div class="card-body text-center p-4">
+                    <h4 class="card-title">Gestión de Proyectos</h4>
+                    <p class="card-text text-muted">
+                        Administración de empleados, proyectos y sus asignaciones.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+                        <a asp-controller="Empleado" asp-action="Index" class="btn btn-success">
+                            Empleados
+                        </a>
+                        <a asp-controller="Proyecto" asp-action="Index" class="btn btn-outline-success">
+                            Proyectos
+                        </a>
+                        <a asp-controller="Asignacion" asp-action="Index" class="btn btn-outline-success">
+                            Asignaciones
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="text-center text-muted mt-5 pb-3">
+    <small>Universidad Don Bosco &middot; Desarrollo de Software Empresarial - DSE104 &middot; 2026</small>
 </div>
