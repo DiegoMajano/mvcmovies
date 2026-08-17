@@ -1,0 +1,26 @@
+@model Empleado
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Empleado</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Nombre</dt>
+        <dd class="col-sm-10">@Model.Nombre</dd>
+        <dt class="col-sm-2">Apellido</dt>
+        <dd class="col-sm-10">@Model.Apellido</dd>
+        <dt class="col-sm-2">Fecha Contratación</dt>
+        <dd class="col-sm-10">@Model.FechaContratacion.ToShortDateString()</dd>
+        <dt class="col-sm-2">Puesto</dt>
+        <dd class="col-sm-10">@Model.Puesto</dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-secondary">Edit</a>
+    <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
+</div>

@@ -1,0 +1,21 @@
+databases:
+  - name: mvcpeliculas-db
+    databaseName: peliculas
+    user: peliculas_user
+    plan: free
+
+services:
+  - type: web
+    name: mvcpeliculas-web
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free 
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: ASPNETCORE_URLS
+        value: http://+:8080
+      - key: ConnectionStrings__DefaultConnection
+        fromDatabase:
+          name: mvcpeliculas-db
+          property: connectionString
