@@ -1,12 +1,12 @@
 databases:
-  - name: mvcpeliculas-db
-    databaseName: peliculas
+  - name: mvcpeliculas-db-rm220481
+    databaseName: peliculas_ofs5
     user: peliculas_user
     plan: free
 
 services:
   - type: web
-    name: mvcpeliculas-web
+    name: mvcmovies
     runtime: docker
     dockerfilePath: ./Dockerfile
     plan: free 
